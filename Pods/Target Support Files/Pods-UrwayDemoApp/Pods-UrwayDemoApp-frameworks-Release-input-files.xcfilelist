@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-UrwayDemoApp/Pods-UrwayDemoApp-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/SwiftPublicIP/SwiftPublicIP.framework
+${BUILT_PRODUCTS_DIR}/SwiftyMenu/SwiftyMenu.framework
+${BUILT_PRODUCTS_DIR}/Urway/Urway.framework
+${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework

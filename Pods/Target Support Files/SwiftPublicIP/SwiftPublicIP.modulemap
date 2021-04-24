@@ -1,0 +1,6 @@
+framework module SwiftPublicIP {
+  umbrella header "SwiftPublicIP-umbrella.h"
+
+  export *
+  module * { export * }
+}

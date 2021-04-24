@@ -1,0 +1,32 @@
+PODS:
+  - iOSDropDown (0.3.4)
+  - SnapKit (5.0.1)
+  - SwiftPublicIP (0.0.2)
+  - SwiftyMenu (0.6.5):
+    - SnapKit (~> 5.0.1)
+  - Urway (1.1.4)
+
+DEPENDENCIES:
+  - iOSDropDown
+  - SwiftPublicIP (~> 0.0.2)
+  - SwiftyMenu (~> 0.6.5)
+  - Urway
+
+SPEC REPOS:
+  trunk:
+    - iOSDropDown
+    - SnapKit
+    - SwiftPublicIP
+    - SwiftyMenu
+    - Urway
+
+SPEC CHECKSUMS:
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftPublicIP: 541a07881cf504954e30237eaa99157b1aa50ca3
+  SwiftyMenu: 9f38e9a22fb9c01b889d33cc362ffc12de042dd2
+  Urway: 0dc29d5f988bca7f892034638172bd7379bd53a9
+
+PODFILE CHECKSUM: 2caee3eb978bd2831525a39fe417aeda752a109c
+
+COCOAPODS: 1.10.1
