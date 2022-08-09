@@ -20,6 +20,7 @@ class ViewController: UIViewController , UIScrollViewDelegate{
     @IBOutlet var zipField: UITextField!
     @IBOutlet var currencyField: UITextField!
     @IBOutlet var countryField: UITextField!
+    @IBOutlet var transidField:UITextField!
     //@IBOutlet var actionField: UITextField!
     
     @IBOutlet weak var actionDropDown: DropDown!
@@ -106,8 +107,8 @@ class ViewController: UIViewController , UIScrollViewDelegate{
         
         self.originalSize = self.tockenField.frame.height
         self.merchantIdentifier.isHidden=true
-        actionDropDown.optionArray=["Select Action","Purchase"," Pre Auth "," Tokenization "]
-       actionDropDown.optionIds = [0,1,4,12]
+        actionDropDown.optionArray=["Select Action","Purchase"," Pre Auth "," Tokenization","refund"]
+       actionDropDown.optionIds = [0,1,4,12,2]
       
         actionDropDown.didSelect{(selectedText , index ,id) in
             self.actionCodeId=String(id)
@@ -265,9 +266,9 @@ class ViewController: UIViewController , UIScrollViewDelegate{
     }
     
     func applePaymentconfigureSDK() {
-        let terminalId = "IosPay"
-        let password = "password"
-        let merchantKey = "96f0a1bd28450c130552bc38d8cb507655ca66d92ea7f558b37d4322c8802b39"
+        let terminalId = "Goshop"
+        let password = "Goshop@123"
+        let merchantKey = "934d9a5168a3b24530ebc2d8d7e875716349199964bf7d5603e7dfe4d368909e"
         let url = "https://payments-dev.urway-tech.com/URWAYPGService/transaction/jsonProcess/JSONrequest"
      
         UWConfiguration(password: password, merchantKey: merchantKey, terminalID: terminalId , url: url )
@@ -275,9 +276,9 @@ class ViewController: UIViewController , UIScrollViewDelegate{
     
     
     func normalPaymentconfigureSDK() {
-        let terminalId = "iOSAndTerm"
-        let password = "password"
-        let merchantKey = "07dc98635e206f259d9d19a12a02750c8c3a996354bc959508e45449c1bcd02f"
+        let terminalId = "mjaz"
+        let password = "mjaz@123"
+        let merchantKey = "523b7b20ae2a7e4c6500f2ea445aed4eb1308bac15692bcbf531aa0c8bc2ebb9"
         let url = "https://payments-dev.urway-tech.com/URWAYPGService/transaction/jsonProcess/JSONrequest"
      
         UWConfiguration(password: password , merchantKey: merchantKey , terminalID: terminalId , url: url )
@@ -300,14 +301,15 @@ class ViewController: UIViewController , UIScrollViewDelegate{
         let floatAmount = Double(amountField.text ?? "0") ?? .zero
 
             let request = PKPaymentRequest()
-            request.merchantIdentifier = merchantIdentifier.text ?? ""
+        // change the name here to your merchant identifer name
+            request.merchantIdentifier = "merchant.urwaytech.applepay"
             request.supportedNetworks = [.quicPay, .masterCard, .visa , .amex , .discover , .mada ]
             request.merchantCapabilities = .capability3DS
 
             request.countryCode = countryField.text ?? ""
             request.currencyCode = currencyField.text ?? ""
 
-            request.paymentSummaryItems = [PKPaymentSummaryItem(label: " Test ",amount: NSDecimalNumber(floatLiteral: floatAmount) )]
+            request.paymentSummaryItems = [PKPaymentSummaryItem(label: " urway ",amount: NSDecimalNumber(floatLiteral: floatAmount) )]
         let controller = PKPaymentAuthorizationViewController(paymentRequest: request)
         if controller != nil
         {
@@ -412,6 +414,8 @@ extension ViewController: Initializer {
   func prepareModel() -> UWInitializer {
    
         let model = UWInitializer.init(amount: amountField.text ?? "",
+                                       // below you will pass the payment id of transaciotn to make the refund 
+                                       transid:"",
                                        email: emailField.text ?? "",
                                        zipCode: zipField.text ?? "",
                                        currency: currencyField.text ?? "",
@@ -427,7 +431,7 @@ extension ViewController: Initializer {
                                        cardToken: tockenField.text,
                                        cardOper: self.cardOperation ,
                                        state: stateField.text ,
-                                       merchantidentifier: merchantIdentifier.text ?? "",
+                                       merchantidentifier: "merchant.urwaytech.applepay",
                                        tokenizationType: "\(segmentController.selectedSegmentIndex)")
 //                                       ,
 //                                       holderName: holderField.text)

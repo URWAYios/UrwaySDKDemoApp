@@ -41,7 +41,7 @@ class PaymentInteractor: IPaymentInteractor {
         let terminalId : String = Common.Globle.terminalId
         let password : String = Common.Globle.password
         let merchantKey : String = Common.Globle.merchantKey
-        
+        let transid : String = model.transid ?? ""
         let trackid :String = model.trackIdCode
         let merchantidentifier : String = model.merchantidentifier ?? ""
         let amount: String = model.amount
@@ -79,7 +79,7 @@ class PaymentInteractor: IPaymentInteractor {
         print("IPAddress :: \(strIPAddress)")
         
         let parameters = [
-            "transid": "",
+            "transid": transid,
             "amount": amount,
             "address": address,
             "customerIp": strIPAddress,

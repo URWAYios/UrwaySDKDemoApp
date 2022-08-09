@@ -6,7 +6,7 @@ target 'UrwayDemoApp' do
   use_frameworks!
 
   # Pods for UrwayDemoApp
-pod 'Urway'
+pod 'Urway',:git=>'https://github.com/URWAYios/UrwaySDK.git'
 pod 'SwiftyMenu', '~> 0.6.5'
 pod 'iOSDropDown'
 pod 'SwiftPublicIP', '~> 0.0.2'

@@ -50,6 +50,7 @@
 		3AC562372477E31200E85D90 /* ReceptCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceptCell.xib; sourceTree = "<group>"; };
 		3C2C0220A5A80C43EDE0525C /* Pods_UrwayDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UrwayDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		469A5C8BB2E2F15E545B884F /* Pods-UrwayDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrwayDemoApp.release.xcconfig"; path = "Target Support Files/Pods-UrwayDemoApp/Pods-UrwayDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		52883D9028A246C700A58F00 /* UrwayDemoAppDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UrwayDemoAppDebug.entitlements; sourceTree = "<group>"; };
 		56B22F82144E2311CFEF99D2 /* Pods-UrwayDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UrwayDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-UrwayDemoApp/Pods-UrwayDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +89,7 @@
 		3AC561BE2477071D00E85D90 /* UrwayDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				52883D9028A246C700A58F00 /* UrwayDemoAppDebug.entitlements */,
 				3A871420248382B300FD75E2 /* UrwayDemoApp.entitlements */,
 				3AC562252477DBB000E85D90 /* ReceptScreen */,
 				3AC561BF2477071D00E85D90 /* AppDelegate.swift */,
@@ -409,7 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = UrwayDemoApp/UrwayDemoApp.entitlements;
+				CODE_SIGN_ENTITLEMENTS = UrwayDemoApp/UrwayDemoAppDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9XYBLS4926;
 				FRAMEWORK_SEARCH_PATHS = (

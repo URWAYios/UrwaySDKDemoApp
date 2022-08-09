@@ -1,2 +1,1 @@
-# UrwaySDK
-URWAY
+# UrwayFramework

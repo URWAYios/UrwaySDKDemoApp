@@ -55,6 +55,7 @@ public class UWInitializer {
     
     
     public init(amount: String ,
+    transid: String? = nil,
          email: String ,
          zipCode: String? = nil ,
          currency: String ,
@@ -73,7 +74,6 @@ public class UWInitializer {
          cardToken: String? = nil,
          cardOper: String,
          state: String? = nil,
-         transid: String? = nil,
          merchantidentifier: String? = nil,
          tokenizationType: String){
 //         ,

@@ -1,0 +1,22 @@
+{
+  "name": "Urway",
+  "version": "1.1.4",
+  "summary": "A short description of Urway.",
+  "homepage": "https://github.com/ameralshabebi/UrwayFramework",
+  "license": {
+    "type": "MIT"
+  },
+  "authors": {
+    "ameralshabebi": "amershabebi@gmail.com"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source": {
+    "git": "https://github.com/ameralshabebi/UrwayFramework.git",
+    "tag": "1.1.4"
+  },
+  "source_files": "UrwayFramework/native/Urway/**/*.{swift,h,m}",
+  "resources": "UrwayFramework/native/Urway/**/*.{strings,xib,xcassets,strings,ttf,otf,css,js,html,storyboard,eot,svg,woff,xcdatamodeld,json,sh,rb}",
+  "frameworks": "UIKit"
+}
