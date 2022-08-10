@@ -113,7 +113,7 @@ class PaymentInteractor: IPaymentInteractor {
         let urlString = Common.Globle.url
         let request = NSMutableURLRequest(url: NSURL(string: urlString)! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
-                                          timeoutInterval: 10.0)
+                                          timeoutInterval: 50.0)
         
         do {
             let postData =  try JSONSerialization.data(withJSONObject: parameters, options: [])

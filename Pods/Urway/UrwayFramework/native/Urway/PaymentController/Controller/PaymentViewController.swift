@@ -116,7 +116,7 @@ extension PaymentViewController: IPaymentViewController {
         if responsecode == "000" {
             print("success")
                            payid = (response?["payid"] as? String) ?? "nil"
-                           tranid = (response?["tranid"] as? String) ?? ""
+                           tranid = (response?["TranId"] as? String) ?? ""
                            responsecode = (response?["responsecode"] as? String) ?? "nil"
                            amount = (response?["amount"] as? String) ?? ""
                            cardToken = (response?["cardToken"] as? String) ?? ""
@@ -144,7 +144,7 @@ extension PaymentViewController: IPaymentViewController {
             let targetURL : String = response?["targetUrl"] as? String ?? ""
             if targetURL.count == 0 {
                 payid = (response?["payid"] as? String) ?? "nil"
-                tranid = (response?["tranid"] as? String) ?? ""
+                tranid = (response?["TranId"] as? String) ?? ""
                 responsecode = (response?["responsecode"] as? String) ?? "nil"
                 amount = (response?["amount"] as? String) ?? ""
                 cardBrand=(response?["cardBrand"] as? String) ?? ""

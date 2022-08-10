@@ -276,10 +276,10 @@ class ViewController: UIViewController , UIScrollViewDelegate{
     
     
     func normalPaymentconfigureSDK() {
-        let terminalId = "mjaz"
-        let password = "mjaz@123"
-        let merchantKey = "523b7b20ae2a7e4c6500f2ea445aed4eb1308bac15692bcbf531aa0c8bc2ebb9"
-        let url = "https://payments-dev.urway-tech.com/URWAYPGService/transaction/jsonProcess/JSONrequest"
+        let terminalId = "Chapter4"
+        let password = "URWAY_Cha@1704"
+        let merchantKey = "9a7734693799b5de4cd3d2c0e570361123c82efcc0e9b4f8adcdf4e761248592"
+        let url = "https://payments.urway-tech.com/URWAYPGService/transaction/jsonProcess/JSONrequest"
      
         UWConfiguration(password: password , merchantKey: merchantKey , terminalID: terminalId , url: url )
     }
@@ -415,7 +415,7 @@ extension ViewController: Initializer {
    
         let model = UWInitializer.init(amount: amountField.text ?? "",
                                        // below you will pass the payment id of transaciotn to make the refund 
-                                       transid:"",
+                                       transid:"2222210114244837348",
                                        email: emailField.text ?? "",
                                        zipCode: zipField.text ?? "",
                                        currency: currencyField.text ?? "",
@@ -440,15 +440,16 @@ extension ViewController: Initializer {
 
     func didPaymentResult(result: paymentResult, error: Error?, model: PaymentResultData?) {
         switch result {
+            
         case .sucess:
-            print("PAYMENT SUCESS")
+            print("PAYMENT SUCESS",model)
             DispatchQueue.main.async {
                 self.navigateTOReceptPage(model: model)
             }
             
         case.failure:
             
-            print("PAYMENT FAILURE")
+            print("PAYMENT FAILURE",model)
             DispatchQueue.main.async {
                 self.navigateTOReceptPage(model: model)
             }
