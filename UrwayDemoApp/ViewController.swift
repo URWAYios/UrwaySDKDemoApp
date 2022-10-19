@@ -266,9 +266,9 @@ class ViewController: UIViewController , UIScrollViewDelegate{
     }
     
     func applePaymentconfigureSDK() {
-        let terminalId = "Goshop"
-        let password = "Goshop@123"
-        let merchantKey = "934d9a5168a3b24530ebc2d8d7e875716349199964bf7d5603e7dfe4d368909e"
+        let terminalId = "urwaytest"
+        let password = "test@123"
+        let merchantKey = "79d71c10b9d51d2c2c8018f58949b507a72db027c6c515fb2499e8d50f23c0dc"
         let url = "https://payments-dev.urway-tech.com/URWAYPGService/transaction/jsonProcess/JSONrequest"
      
         UWConfiguration(password: password, merchantKey: merchantKey, terminalID: terminalId , url: url )
@@ -276,10 +276,10 @@ class ViewController: UIViewController , UIScrollViewDelegate{
     
     
     func normalPaymentconfigureSDK() {
-        let terminalId = "Chapter4"
-        let password = "URWAY_Cha@1704"
-        let merchantKey = "9a7734693799b5de4cd3d2c0e570361123c82efcc0e9b4f8adcdf4e761248592"
-        let url = "https://payments.urway-tech.com/URWAYPGService/transaction/jsonProcess/JSONrequest"
+        let terminalId = "urwaytest"
+        let password = "test@123"
+        let merchantKey = "79d71c10b9d51d2c2c8018f58949b507a72db027c6c515fb2499e8d50f23c0dc"
+        let url = "https://payments-dev.urway-tech.com/URWAYPGService/transaction/jsonProcess/JSONrequest"
      
         UWConfiguration(password: password , merchantKey: merchantKey , terminalID: terminalId , url: url )
     }
